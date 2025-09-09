@@ -78,7 +78,7 @@ class SignInFragment : Fragment() {
             when (state) {
                 is SignInState.Success -> {
                     Toast.makeText(requireContext(), "Sign in successful!", Toast.LENGTH_SHORT).show()
-
+                    findNavController().navigate(R.id.action_signInFragment_to_homeFragment)
                 }
                 is SignInState.Error -> {
                     // Hiển thị lỗi giống trong thiết kế
